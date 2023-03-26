@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plagins",
+  "info": {
+    "singularName": "plagin",
+    "pluralName": "plagins",
+    "displayName": "Плагин",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "appApiHandlerUrl": {
+      "type": "text"
+    },
+    "categories": {
+      "type": "json"
+    },
+    "settingWaitPage": {
+      "type": "boolean"
+    },
+    "mapUserJoin": {
+      "type": "boolean"
+    },
+    "onUserJoin": {
+      "type": "boolean"
+    },
+    "onUserReject": {
+      "type": "boolean"
+    },
+    "onUserErrorJoin": {
+      "type": "boolean"
+    },
+    "onUserLeave": {
+      "type": "boolean"
+    },
+    "onUserMove": {
+      "type": "boolean"
+    },
+    "onCloseRoom": {
+      "type": "boolean"
+    },
+    "rates": {
+      "type": "json"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "plagins"
+    },
+    "connectedUsers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "connectedPlugins"
+    },
+    "requestsToConnectUsers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "requestsToConnectPlugins"
+    },
+    "alias": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

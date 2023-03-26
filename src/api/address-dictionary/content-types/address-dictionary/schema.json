@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "address_dictionaries",
+  "info": {
+    "singularName": "address-dictionary",
+    "pluralName": "address-dictionaries",
+    "displayName": "Словарь адресов",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainServerUrl": {
+      "type": "text"
+    },
+    "mainClientUrl": {
+      "type": "text"
+    },
+    "mediaServerUrl": {
+      "type": "text"
+    },
+    "mediaClientUrl": {
+      "type": "string"
+    }
+  }
+}
